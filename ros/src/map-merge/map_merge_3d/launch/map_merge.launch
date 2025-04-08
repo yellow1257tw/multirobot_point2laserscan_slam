@@ -1,0 +1,25 @@
+<launch>
+  <group ns="map_merge">
+    <node pkg="map_merge_3d" type="map_merge_node" respawn="false" name="map_merge_3d" output="screen">
+      <!-- 設定接收來自 ORB-SLAM2 的地圖點雲 topic -->
+      <param name="robot_map_topic" value="orb_slam2_rgbd/map_points"/>
+      <!-- 若多機器人可以指定前綴，否則保持空字串 -->
+      <param name="robot_namespace" value=""/>
+      <!-- 融合後地圖的發佈 topic -->
+      <param name="merged_map_topic" value="merged_map"/>
+      <!-- 世界參考座標 -->
+      <param name="world_frame" value="map"/>
+
+      <!-- 頻率設定 -->
+      <param name="compositing_rate" value="1.0"/>
+      <param name="discovery_rate" value="0.5"/>
+      <param name="estimation_rate" value="0.2"/>
+
+      <!-- 發佈 TF -->
+      <param name="publish_tf" value="true"/>
+
+      <!-- 額外融合參數可按需添加 -->
+    </node>
+  </group>
+</launch>
+
