@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<launch>
+  <arg name="geotiff_map_file_path" default="$(find hector_geotiff)/maps"/>
+
+  <arg name="dp_no" default="dp3_0"/>
+
+  <param name="/use_sim_time" value="true"/>
+
+
+  <!--include file="$(find hector_mapping)/launch/mapping_default.launch"-->
+  <include file="/home/slam/ros/src/my_hector_map_0.launch">
+  </include>
+</launch>

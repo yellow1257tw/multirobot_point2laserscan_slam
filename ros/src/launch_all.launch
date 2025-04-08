@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+
+<launch>
+  <include file="/home/slam/ros/src/dpoom_world/multi_dpoom_house.launch" />
+  <include file="/home/slam/ros/src/all_laserscan.launch" />
+  <include file="/home/slam/ros/src/multi_gmapping.launch" />
+  <include file="/home/slam/ros/src/multi_dpoom_map_merge.launch" />
+
+  <!-- 啟動 RViz -->
+  <node pkg="rviz" type="rviz" name="rviz" output="screen"/>
+</launch>
+
