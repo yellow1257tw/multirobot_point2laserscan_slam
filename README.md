@@ -19,3 +19,6 @@ mkdir workspace   and catkin_make
 step3  
 
 roslaunch launch_all.launch  
+
+
+請自己檢查各launch內路徑 以及機器人model設定 
